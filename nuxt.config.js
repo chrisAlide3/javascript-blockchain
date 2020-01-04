@@ -41,7 +41,15 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/vuetify',
+    '@nuxtjs/axios',
   ],
+
+  axios: {
+      //baseURL: process.env.NODE_ENV === 'development' ?'http://localhost:3000' :'https://nuxt-blog-express.herokuapp.com',
+      baseURL: 'http://' + process.env.WEBSITE_HOSTNAME,
+      credentials: false
+    // proxyHeaders: false
+  },
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module

@@ -6,12 +6,18 @@ const app = express()
 // Import and Set Nuxt.js options
 let config = require('../nuxt.config.js')
 config.dev = !(process.env.NODE_ENV === 'production')
+console.log('Env in server: ' + process.env.NUXT_HOST);
 
 async function start() {
   // Init Nuxt.js
   const nuxt = new Nuxt(config)
 
   const { host, port } = nuxt.options.server
+
+  // const nodeUrl = 'http://' + host + ':' + port;
+  // this.$store.dispatch('setCurrentNodeUrl', nodeUrl);
+  // const blockchainFileName = "blockchain" + nodeUrl.replace(/\//g, '') + ".txt";
+  // this.$store.dispatch('setBlockchainFileName', blockchainFileName);
 
   // Build only in dev mode
   if (config.dev) {
