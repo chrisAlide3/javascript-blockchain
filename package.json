@@ -20,7 +20,7 @@
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "fs": "0.0.1-security",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.15.8"
   },
   "devDependencies": {
     "stylus": "^0.54.5",
